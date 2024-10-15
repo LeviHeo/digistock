@@ -1,0 +1,26 @@
+@use './_components.scss';
+
+.pageWrapper {
+  @apply w-full pt-[calc(var(--header-height)+var(--header-quickMenu-height)+var(--header-mob-highlight-height))] transition-[padding] duration-300 pb-[30px];
+
+  &.showMobHighlightCta {
+    --header-mob-highlight-height: 44px;
+
+    @screen lg {
+      --header-mob-highlight-height: 0px;
+    }
+  }
+
+  &.hasImportantNotice {
+    @apply pt-[calc(var(--header-height)+var(--header-quickMenu-height)+var(--header-importantNotice-height)+var(--header-mob-highlight-height))];
+  }
+
+  &.showNoticeDetail {
+    --header-importantNotice-content-height: 540px;
+    @apply pt-[calc(var(--header-height)+var(--header-quickMenu-height)+var(--header-importantNotice-height)+var(--header-importantNotice-content-height)+var(--header-mob-highlight-height))];
+  }
+
+  &:has(section[class*='TwoColumnRedirectionCTACards']) {
+    @apply pb-[0px];
+  }
+}

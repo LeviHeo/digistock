@@ -1,0 +1,29 @@
+.svgIcon {
+  @apply relative block w-full h-full max-w-[300px];
+  // print-color-adjust: exact;
+
+  span {
+    @apply block absolute z-0 w-full h-full will-change-[transform,opacity,filter] fill-current bg-current inset-0;
+  }
+
+  &.svgIcon-color span {
+    background-color:initial;
+    background-image: var(--icon-image);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &.svgIcon-monochrome span {
+    background-color: currentColor;
+    mask-image: var(--icon-image);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: auto;
+    mask-size: auto;
+    mask-position: center;
+  }
+}
+
+.svgIconWrap {
+  // Todo...
+}

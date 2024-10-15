@@ -1,0 +1,92 @@
+@use '_components.scss';
+
+.sectionHeaderBanner {
+  @apply relative;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+
+  &:has(+ section) {
+    + section {
+      margin-top: 0px !important;
+      border-radius: 0px !important;
+    }
+  }
+
+  &.small {
+    .moduleInner {
+      @apply h-[20svh];
+
+      @screen md {
+        @apply h-[35svh];
+      }
+    }
+  }
+
+  &.large {
+    .moduleInner {
+      @apply h-[45svh];
+
+      @screen md {
+        @apply h-[65svh];
+      }
+    }
+  }
+
+  .moduleInner {
+    @apply relative;
+
+    .imgWrapper {
+      @apply relative w-full h-full;
+
+      .img {
+        @apply w-full h-full object-cover;
+      }
+    }
+
+    .content {
+      @apply absolute top-0 left-0 w-full h-full;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%),
+        linear-gradient(180deg, rgba(0, 0, 0, 0) 38.38%, rgba(0, 0, 0, 0.3) 68%);
+
+      @screen md {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.45) 100%);
+      }
+
+      .contentWrapper {
+        @apply flex flex-col gap-2 items-center justify-end h-full pxContent pb-[30px];
+
+        @screen md {
+          @apply pb-[50px];
+        }
+
+        .title {
+          @apply mt-3 h1 capitalize text-white text-center leading-[105%];
+
+          @screen md {
+            @apply mt-[5px];
+          }
+        }
+
+        .description {
+          @apply w-full text-[12px] leading-normal font-normal text-center text-white;
+
+          @screen md {
+            @apply text-[14px];
+          }
+        }
+      }
+    }
+  }
+
+  .mediaCaption {
+    @apply absolute bottom-[var(--main-spacing-x-sm)] right-[var(--main-spacing-x-sm)];
+
+    @screen md {
+      @apply right-[var(--main-spacing-x)] bottom-[30px];
+    }
+
+    @screen lg {
+      @apply right-[calc(var(--main-spacing-x)*2)];
+    }
+  }
+}

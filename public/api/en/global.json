@@ -1,0 +1,464 @@
+{
+  "favIcon": "/assets/favicon.png",
+  "logo": {
+    "src": {
+      "desktop": "/assets/img/logo.png",
+      "mobile": null
+    }
+  },
+  "navigation": {
+    "header": [
+      {
+        "title": "Market Activity",
+        "description": "Market activity is a dynamic and ever-evolving aspect of the financial world, where investors analyze various aspects of the stock market to make informed decisions. ",
+        "link": null,
+        "sub": [
+          {
+            "layout": "list",
+            "title": "Market Activity",
+            "items": [
+              {
+                "label": "Stocks",
+                "link": {
+                  "type": "routeLink",
+                  "href": "/en"
+                }
+              },
+              {
+                "label": "Options",
+                "link": {
+                  "type": "routeLink",
+                  "href": "/en"
+                }
+              },
+              {
+                "label": "ETFs",
+                "link": {
+                  "type": "routeLink",
+                  "href": "/en"
+                }
+              }
+            ]
+          },
+          {
+            "layout": "list",
+            "title": "Market Regulation",
+            "items": [
+              {
+                "label": "U.S. Regulation",
+                "link": {
+                  "type": "routeLink",
+                  "href": "/en"
+                }
+              },
+              {
+                "label": "European Regulation",
+                "link": {
+                  "type": "routeLink",
+                  "href": "/en"
+                }
+              }
+            ]
+          },
+          {
+            "layout": "list",
+            "title": "Quick Links",
+            "items": [
+              {
+                "label": "Real-Time Quotes",
+                "link": {
+                  "type": "routeLink",
+                  "href": "/en"
+                }
+              },
+              {
+                "label": "After-Hours Quotes",
+                "link": {
+                  "type": "routeLink",
+                  "href": "/en"
+                }
+              },
+              {
+                "label": "Pre-Market Quotes",
+                "link": {
+                  "type": "routeLink",
+                  "href": "/en"
+                }
+              },
+              {
+                "label": "Nasdaq-100",
+                "link": {
+                  "type": "routeLink",
+                  "href": "/en"
+                }
+              },
+              {
+                "label": "Simbol Screener",
+                "link": {
+                  "type": "routeLink",
+                  "href": "/en"
+                }
+              }
+            ]
+          },
+          {
+            "layout": "list",
+            "title": "Market Events",
+            "items": [
+              {
+                "label": "Economic Calendar",
+                "link": {
+                  "type": "routeLink",
+                  "href": "/en"
+                }
+              },
+              {
+                "label": "Earnings",
+                "link": {
+                  "type": "routeLink",
+                  "href": "/en"
+                }
+              },
+              {
+                "label": "IPO Calendar",
+                "link": {
+                  "type": "routeLink",
+                  "href": "/en"
+                }
+              },
+              {
+                "label": "SPO Calendar",
+                "link": {
+                  "type": "routeLink",
+                  "href": "/en"
+                }
+              }
+            ]
+          },
+          {
+            "layout": "list",
+            "title": "Analyst Activity",
+            "items": [
+              {
+                "label": "Abaktst Recinnebdatuibs",
+                "link": {
+                  "type": "routeLink",
+                  "href": "/en"
+                }
+              },
+              {
+                "label": "Daukt Earbubgs Surprise",
+                "link": {
+                  "type": "routeLink",
+                  "href": "/en"
+                }
+              },
+              {
+                "label": "Forecast Changes",
+                "link": {
+                  "type": "routeLink",
+                  "href": "/en"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "News + Insights",
+        "description": "Keeping up with the latest news and gaining valuable insights is crucial for any professional in the stock market industry. ",
+        "link": null,
+        "sub": [
+          {
+            "layout": "card",
+            "title": "Topics",
+            "items": [
+              {
+                "title": "TradeTalks",
+                "description": "Hosted by Jill Malandrino, TradeTalks broadcasts live from MarketSite in Times Square and Global Industry Conferences and Events. Featuring conversations with top industry thought leaders on trends, news and education.",
+                "media": {
+                  "type": "image",
+                  "src": {
+                    "desktop": "/assets/img/content/highlight_01.jpg",
+                    "mobile": null
+                  },
+                  "alt": "",
+                  "poster": null,
+                  "mediaCaption": null
+                },
+                "cta": [
+                  {
+                    "label": "Watch Now",
+                    "theme": "secondary",
+                    "color": "red",
+                    "icon": {
+                      "name": "arrowRight",
+                      "position": "right"
+                    },
+                    "link": {
+                      "type": "routeLink",
+                      "href": "/en"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "layout": "card",
+            "title": "Features",
+            "items": [
+              {
+                "title": "What Makes Stock Prices Move?",
+                "description": "When starting out on a trading and investing journey, everything seems mystifying.",
+                "media": {
+                  "type": "image",
+                  "src": {
+                    "desktop": "/assets/img/content/highlight_02.jpg",
+                    "mobile": null
+                  },
+                  "alt": "",
+                  "poster": null,
+                  "mediaCaption": "This is media caption."
+                },
+                "cta": [
+                  {
+                    "label": "Read More",
+                    "theme": "secondary",
+                    "color": "red",
+                    "icon": {
+                      "name": "arrowRight",
+                      "position": "right"
+                    },
+                    "link": {
+                      "type": "routeLink",
+                      "href": "/en"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "highlightCta": [
+      {
+        "label": "Visit LeviHeo.app",
+        "theme": "primary",
+        "color": "red",
+        "icon": null,
+        "link": {
+          "type": "newWindow",
+          "href": "https://www.leviheo.app/en?source=digistock"
+        }
+      }
+    ],
+    "noticeBar": {
+      "quickMenu": [
+        {
+          "label": "DigiStock Marketsite",
+          "link": {
+            "type": "routeLink",
+            "href": "/en"
+          }
+        },
+        {
+          "label": "NewsLetters",
+          "link": {
+            "type": "routeLink",
+            "href": "/en"
+          }
+        }
+      ],
+      "importantNotice": null
+    },
+    "footer": [
+      {
+        "title": "About",
+        "items": [
+          {
+            "label": "Our People",
+            "link": {
+              "type": "routeLink",
+              "href": "/en"
+            }
+          },
+          {
+            "label": "Board of Directors",
+            "link": {
+              "type": "routeLink",
+              "href": "/en"
+            }
+          },
+          {
+            "label": "Careers",
+            "link": {
+              "type": "routeLink",
+              "href": "/en"
+            }
+          },
+          {
+            "label": "DigiStock Newsroom",
+            "link": {
+              "type": "routeLink",
+              "href": "/en"
+            }
+          }
+        ]
+      },
+      {
+        "title": "Quick Links",
+        "items": [
+          {
+            "label": "Question Today",
+            "link": {
+              "type": "routeLink",
+              "href": "/en"
+            }
+          },
+          {
+            "label": "Investor Relations",
+            "link": {
+              "type": "routeLink",
+              "href": "/en"
+            }
+          },
+          {
+            "label": "European Markets",
+            "link": {
+              "type": "routeLink",
+              "href": "/en"
+            }
+          }
+        ]
+      },
+      {
+        "title": "DigiStock Initiatives",
+        "items": [
+          {
+            "label": "Purpose",
+            "link": {
+              "type": "routeLink",
+              "href": "/en"
+            }
+          },
+          {
+            "label": "Market Stucture",
+            "link": {
+              "type": "routeLink",
+              "href": "/en"
+            }
+          },
+          {
+            "label": "ESG at DigiStock",
+            "link": {
+              "type": "routeLink",
+              "href": "/en"
+            }
+          }
+        ]
+      },
+      {
+        "title": "DigiStock+",
+        "items": [
+          {
+            "label": "About DigiStock",
+            "link": {
+              "type": "routeLink",
+              "href": "/en"
+            }
+          },
+          {
+            "label": "Dashboard",
+            "link": {
+              "type": "routeLink",
+              "href": "/en"
+            }
+          },
+          {
+            "label": "Weekly Macro+",
+            "link": {
+              "type": "routeLink",
+              "href": "/en"
+            }
+          }
+        ]
+      }
+    ],
+    "footerQuickMenu": [
+      {
+        "label": "Privacy Policy",
+        "link": {
+          "type": "routeLink",
+          "href": "/en"
+        }
+      },
+      {
+        "label": "Cookies",
+        "link": {
+          "type": "routeLink",
+          "href": "/en"
+        }
+      },
+      {
+        "label": "Legal",
+        "link": {
+          "type": "routeLink",
+          "href": "/en"
+        }
+      },
+      {
+        "label": "Cookies Settings",
+        "link": {
+          "type": "routeLink",
+          "href": "/en"
+        }
+      }
+    ]
+  },
+  "sns": [
+    {
+      "label": "Instagram",
+      "link": "https://www.instagram.com/digidumpling/",
+      "icon": "/assets/img/sprites/instagram.svg"
+    },
+    {
+      "label": "Facebook",
+      "link": "https://www.facebook.com/digidumplinglimited/",
+      "icon": "/assets/img/sprites/facebook.svg"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/company/digidumpling",
+      "icon": "/assets/img/sprites/linkedin.svg"
+    }
+  ],
+  "dictionary": {
+    "siteTitle": "DigiStock",
+    "copyright": "Copyright © DigiStock. All rights reserved.",
+    "error": {
+      "notFound": {
+        "title": "Page not found",
+        "description": "The requested URL was not found on this server."
+      },
+      "internsalServer": {
+        "title": "Internal Server Error",
+        "description": "Please check"
+      }
+    },
+    "button": {
+      "hide": "Hide",
+      "learnMore": "Learn More",
+      "search": "Symbol Search",
+      "back": "Back",
+      "prev": "Previous",
+      "next": "Next",
+      "edit": "Edit",
+      "delete": "Delete",
+      "submit": "Submit",
+      "update": "Update",
+      "all": "all"
+    }
+  }
+}

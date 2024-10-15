@@ -1,0 +1,131 @@
+@tailwind components;
+
+@layer components {
+  .fontTitle {
+    font-family: var(--font-title);
+  }
+
+  .fontBody {
+    font-family: var(--font-default);
+  }
+
+  .heading {
+    @apply fontTitle font-bold;
+  }
+
+  .h1 {
+    @apply heading text-[38px] leading-[105%];
+
+    @screen md {
+      @apply text-[72px] -tracking-[0.72px];
+    }
+  }
+
+  .h2 {
+    @apply heading text-[32px] leading-[103%];
+
+    @screen md {
+      @apply text-[56px] -tracking-[0.56px];
+    }
+  }
+
+  .h3 {
+    @apply heading text-[28px] leading-[110%];
+
+    @screen md {
+      @apply text-[42px] -tracking-[0.56px];
+    }
+  }
+
+  .h4 {
+    @apply heading text-[26px] leading-[112%];
+
+    @screen md {
+      @apply text-[32px];
+    }
+  }
+
+  .h5 {
+    @apply heading text-[24px] tracking-normal leading-[130%];
+
+    @screen md {
+      @apply text-[28px];
+    }
+  }
+
+  .h6 {
+    @apply heading text-[18px] tracking-normal;
+
+    @screen md {
+      @apply text-[24px];
+    }
+  }
+
+  .bodyText1 {
+    @apply text-[18px];
+  }
+
+  .bodyText2 {
+    @apply text-[16px] leading-[156%];
+  }
+
+  .bodyText3 {
+    @apply text-[14px];
+  }
+
+  .tagMd {
+    @apply text-[14px];
+  }
+
+  .tagSm {
+    @apply text-[12px];
+  }
+
+  .button {
+    @apply fontTitle font-bold leading-[100%];
+  }
+
+  .btnMd {
+    @apply button text-[16px] tracking-[0.16px] leading-[16px];
+  }
+
+  .btnSm {
+    @apply button text-[14px] tracking-[0.28px] leading-[14px];
+  }
+
+  .blind {
+    @apply h-px overflow-hidden w-px absolute;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .displayDesktop {
+    display: none;
+
+    @screen md {
+      display: block;
+    }
+  }
+
+  .displayMobile {
+    display: block;
+
+    @screen md {
+      display: none;
+    }
+  }
+
+  .pxContent {
+    @apply px-main-spacing-x-sm;
+
+    @screen md {
+      @apply px-main-spacing-x;
+    }
+
+    @screen hd {
+      @apply px-main-spacing-x-lg;
+    }
+  }
+}

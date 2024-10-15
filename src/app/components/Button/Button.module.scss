@@ -1,0 +1,197 @@
+@use './_components.scss';
+
+.btn {
+  @apply transition-[filter,opacity,color,background] duration-500;
+
+  .btnLabel {
+    @apply inline-block pt-[1px] uppercase btnMd break-keep;
+  }
+
+  .buttonIconWrap {
+    @apply inline-block transition-[background,color];
+  }
+
+  &.hk,
+  &.sc {
+    .btnLabel {
+      @apply mb-[0.2em];
+    }
+  }
+
+  &.disabled {
+    @apply pointer-events-none grayscale-[1] opacity-50;
+  }
+
+  &.md {
+    .btnLabel {
+      @apply btnSm;
+
+      @screen md {
+        @apply btnMd;
+      }
+    }
+  }
+
+  &.sm {
+    .btnLabel {
+      @apply btnSm;
+    }
+  }
+
+  &.lg {
+    .btnLabel {
+      @apply text-[21px];
+    }
+  }
+
+  &.hasIcon {
+    @apply flex;
+
+    &.iconLeft {
+      @apply flex-row-reverse;
+    }
+
+    &.iconRight {
+      @apply flex-row;
+    }
+  }
+
+  &.primary,
+  &.outline {
+    @apply inline-flex justify-center items-center gap-[5px] h-[40px] leading-[40px] px-6;
+
+    .buttonIconWrap {
+      @apply w-[14px] h-[14px];
+    }
+  }
+
+  &.default {
+    @apply inline-flex justify-center items-center gap-[5px];
+
+    .buttonIconWrap {
+      @apply w-[20px] h-[20px];
+    }
+  }
+
+  &.primary {
+    @apply text-white;
+
+    &.red {
+      @apply bg-primary;
+
+      &:hover {
+        @apply bg-primary-hover;
+      }
+    }
+
+    &.white {
+      @apply text-primary bg-white;
+
+      &:hover {
+        @apply bg-black text-white;
+      }
+    }
+
+    &.black {
+      @apply bg-black;
+
+      &:hover {
+        @apply bg-black;
+      }
+    }
+  }
+
+  &.secondary {
+    @apply inline-flex justify-center items-center gap-[8px] h-auto leading-none;
+
+    .buttonIconWrap {
+      @apply flex justify-center items-center min-w-5 min-h-5 rounded-full text-white;
+
+      > i {
+        @apply w-[14px] h-[14px];
+      }
+    }
+
+    &.red {
+      .buttonIconWrap {
+        @apply bg-primary;
+      }
+
+      &:hover {
+        @apply text-primary;
+
+        .buttonIconWrap {
+          @apply bg-primary-hover;
+        }
+      }
+    }
+
+    &.white {
+      .buttonIconWrap {
+        @apply bg-white text-primary;
+      }
+
+      &:hover {
+        @apply text-black;
+
+        .buttonIconWrap {
+          @apply bg-black;
+        }
+      }
+    }
+
+    &.black {
+      .buttonIconWrap {
+        @apply bg-black;
+      }
+
+      &:hover {
+        @apply text-black;
+
+        .buttonIconWrap {
+          @apply bg-black;
+        }
+      }
+    }
+  }
+
+  &.outline {
+    @apply border-[1px] border-solid;
+
+    &.red {
+      @apply border-primary;
+    }
+
+    &.black {
+      @apply border-black;
+
+      &:hover {
+        @apply bg-black text-white border-black;
+      }
+    }
+  }
+
+  &.circle {
+    @apply flex items-center justify-center w-[48px] h-[48px] rounded-full text-white;
+
+    &.red {
+      @apply bg-primary;
+
+      &:hover {
+        @apply bg-primary-hover;
+      }
+    }
+
+    &.black {
+      @apply bg-black;
+
+      &:hover {
+        @apply bg-black;
+      }
+    }
+
+    .buttonIconWrap {
+      @apply w-[20px] h-[20px];
+    }
+  }
+}

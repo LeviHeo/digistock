@@ -1,0 +1,18 @@
+@use '_components.scss';
+
+.conerButton {
+  @apply absolute bottom-0 right-0 z-20 w-[92px] rounded-br-[20px];
+  aspect-ratio: 1 / 0.95;
+
+  .inner {
+    @apply relative w-full h-full flex items-center justify-center;
+  }
+
+  .btn {
+    @apply relative z-10 left-[13px] top-[13px];
+  }
+
+  .coner {
+    @apply absolute right-[-1px] z-0 w-full h-full;
+  }
+}

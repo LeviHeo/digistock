@@ -1,0 +1,99 @@
+@use '_components.scss';
+
+.breadcrumb {
+  @apply relative z-10;
+
+  &.top {
+    @apply hidden;
+
+    @screen md {
+      @apply block mt-4;
+    }
+  }
+
+  &.bottom {
+    @apply block mt-0;
+
+    @screen md {
+      @apply hidden;
+    }
+
+    .breadcrumbInner {
+      @apply pt-2 pb-8;
+      @apply flex justify-center;
+
+      ul {
+        @apply w-max justify-center;
+      }
+    }
+  }
+  &:has(+ section[class*='sectionHeaderBanner']),
+  &:has(+ section[class*='IntroductionWithTabs']),
+  &:has(+ section[class*='CampaignPageKeyVisual']),
+  &:has(+ div > div > section[class*='sectionHeaderBanner']) {
+    @apply absolute;
+    .breadcrumbInner {
+      ul {
+        li {
+          &.current {
+            @apply text-white;
+          }
+
+          &::after {
+            @apply text-white;
+          }
+
+          a {
+            @apply text-white;
+          }
+
+          li {
+            &::after {
+              @apply text-white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .breadcrumbInner {
+    @apply pxContent;
+
+    ul {
+      @apply flex flex-wrap gap-x-7;
+
+      li {
+        @apply text-[12px];
+
+        &:has(+ li) {
+          @apply relative;
+
+          &:after {
+            @apply content-['/'] absolute -right-4 text-[#666666];
+          }
+        }
+
+        @screen md {
+          @apply text-sm;
+        }
+
+        &.current {
+          @apply text-black;
+        }
+
+        a {
+          @apply text-[#666666] transition-colors;
+
+          &:hover {
+            @apply text-primary;
+          }
+        }
+
+        span {
+          @apply uppercase;
+        }
+      }
+    }
+  }
+}

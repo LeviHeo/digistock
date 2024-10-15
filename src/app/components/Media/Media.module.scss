@@ -1,0 +1,17 @@
+figure {
+  &.slider {
+    img {
+      position: static !important;
+    }
+  }
+
+  &.card {
+    img {
+      position: static !important;
+    }
+  }
+}
+
+.videoCont {
+  @apply object-cover;
+}

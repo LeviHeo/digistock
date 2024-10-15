@@ -1,0 +1,120 @@
+@use '_components.scss';
+
+.header {
+  @apply fixed z-headerWrap top-0 w-full h-[calc(var(--header-height)+var(--header-quickMenu-height)+var(--header-mob-highlight-height))] transition-[background-color,top,height,border] duration-300 bg-white border-b-[1px] border-solid border-[#e9e9e9] min-w-[300px];
+
+  &.posTop {
+    @apply border-b-[1px] border-transparent;
+  }
+
+  &.showMobHighlightCta {
+    --header-mob-highlight-height: 44px;
+    @apply border-b-0;
+
+    @screen md {
+      @apply border-b-[1px];
+    }
+
+    @screen lg {
+      --header-mob-highlight-height: 0px;
+    }
+  }
+
+  .headerInner {
+    @apply flex justify-between items-center gap-10 max-w-wrapper mx-auto w-full h-[calc(var(--header-height))];
+    @apply pxContent;
+
+    .hiddenH1 {
+      @apply invisible;
+    }
+  }
+
+  &.hideHeader {
+    @apply -top-[var(--header-quickMenu-height)];
+  }
+
+  &.fullyHideHeader {
+    @apply -top-[calc(var(--header-height)+var(--header-quickMenu-height)+var(--header-mob-highlight-height))];
+
+    @screen lg {
+      @apply -top-[calc(var(--header-height)+var(--header-quickMenu-height))];
+    }
+  }
+
+  .logo {
+    @apply relative z-headerLogo;
+
+    img {
+      @apply block w-auto h-[39px];
+
+      @screen lg {
+        @apply h-[56px] w-[210px];
+      }
+    }
+
+    @screen md {
+      @apply z-headerLogoMd;
+    }
+  }
+
+  .navContainer {
+    @apply relative z-navContainer flex items-center justify-end gap-x-10;
+
+    @screen md {
+      @apply w-full;
+    }
+  }
+
+  .quickMenu {
+    @apply hidden;
+
+    @screen lg {
+      @apply block relative z-[100] bg-dark h-[var(--header-quickMenu-height)];
+    }
+
+    .quickMenuInner {
+      @apply flex justify-end items-center h-full max-w-wrapper mx-auto;
+      @apply pxContent;
+    }
+
+    .quickMenuActions {
+      @apply flex items-center gap-7;
+    }
+
+    .quickMenuItem {
+      @apply text-white leading-none;
+
+      [class*='buttonIconWrap'] {
+        @apply w-3 h-3;
+
+        @screen hd {
+          @apply w-[18px] h-[18px];
+        }
+      }
+
+      span {
+        @apply block fontBody text-xs font-semibold uppercase leading-none;
+
+        @screen hd {
+          @apply text-sm;
+        }
+      }
+    }
+  }
+
+  .highlightCtaMob {
+    @apply h-[var(--header-mob-highlight-height)] overflow-hidden;
+
+    .highlightCta {
+      @apply flex;
+
+      .square {
+        @apply flex-1 rounded-none h-[var(--header-mob-highlight-height)];
+      }
+    }
+
+    @screen lg {
+      @apply hidden;
+    }
+  }
+}

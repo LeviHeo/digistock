@@ -1,0 +1,64 @@
+{
+  "overview": {
+    "ticker": "CLIK",
+    "name": "Click Holdings Limited Ordinary Share",
+    "market": "stocks",
+    "locale": "us",
+    "primary_exchange": "XNAS",
+    "type": "CS",
+    "active": true,
+    "currency_name": "usd",
+    "cik": "0002020027",
+    "market_cap": 2.4e7,
+    "description":"Click Holdings Ltd is a human resources solutions provider, specializing in offering comprehensive human resources solutions. It is focused on talent sourcing and the provision of temporary and permanent personnel to customers and also in placing professional accountants and company secretaries, registered nurses and healthcare workers as well as other blue-collar workers, for direct hire and contract staffing roles. The Company operates in three segments, 1) professional solution services, 2) nursing solution services and 3) logistic and other solution services. Maximum revenue is generated from Professional solution services and Hong Kong.",
+    "ticker_root": "CLIK",
+    "homepage_url": "https://www.clicksc.com.hk",
+    "list_date": "2024-10-09",
+    "share_class_shares_outstanding": 14900000,
+    "weighted_shares_outstanding": 15000000,
+    "round_lot": 100
+  },
+  "prevClose":[{
+    "T": "CLIK",
+    "v": 237176,
+    "vw": 1.5665,
+    "o": 1.54,
+    "c": 1.6081,
+    "h": 1.68,
+    "l": 1.5,
+    "t": 1728936000000,
+    "n": 720
+  }],
+  "chart":[
+    {
+        "v": 2620535,
+        "vw": 2.9118,
+        "o": 4,
+        "c": 2.64,
+        "h": 4.39,
+        "l": 2,
+        "t": 1728446400000,
+        "n": 11367
+    },
+    {
+        "v": 1253211,
+        "vw": 1.7565,
+        "o": 2.2,
+        "c": 1.46,
+        "h": 2.44,
+        "l": 1.35,
+        "t": 1728532800000,
+        "n": 5583
+    },
+    {
+        "v": 935200,
+        "vw": 1.608,
+        "o": 1.47,
+        "c": 1.6,
+        "h": 1.81,
+        "l": 1.39,
+        "t": 1728619200000,
+        "n": 3656
+    }
+  ]
+}

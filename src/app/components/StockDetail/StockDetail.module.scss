@@ -1,0 +1,97 @@
+@use '_components.scss';
+
+.stockDetail {
+  @apply py-main-spacing-x-lg px-main-spacing-x-sm max-w-[1440px] mx-auto;
+
+  @screen md {
+    @apply px-main-spacing-x;
+  }
+
+  @screen lg {
+    @apply px-main-spacing-x-lg;
+  }
+
+  .chart {
+    @apply w-[100%] h-[300px];
+  }
+
+  .ticker {
+    @apply h4 mb-2;
+  }
+
+  .info {
+    @apply flex gap-4 mb-2;
+
+    li {
+      @apply font-bold;
+
+      + li {
+        @apply relative pl-2;
+
+        &:before {
+          @apply content-[''] w-[1px] h-[50%] absolute top-1/4 -left-1 bg-slate-400;
+        }
+      }
+    }
+  }
+
+  .subInfo {
+    @apply flex gap-2 mb-4;
+
+    li {
+      @apply text-[12px] font-semibold bg-[#e9e9e9] px-2 rounded-[30px] leading-normal;
+    }
+  }
+
+  .otherInfo {
+    @apply flex flex-wrap border-1 border-solid border-[#e9e9e9] border-b-0 mb-10;
+
+    .infoRow {
+      @apply flex w-[100%] border-b-1 border-solid border-[#e9e9e9] font-[14px];
+
+      @screen md {
+        @apply w-[50%];
+      }
+
+      > div {
+        @apply p-2;
+      }
+
+      .th {
+        @apply w-[50%] font-bold bg-slate-100;
+
+        @screen md {
+          @apply w-[35%];
+        }
+      }
+
+      &:nth-child(2n) {
+        @apply border-l-1 border-solid border-[#e9e9e9];
+      }
+    }
+  }
+
+  .companySite {
+    @apply mt-2;
+
+    a {
+      @apply text-[14px] text-primary;
+
+      &:hover {
+        @apply text-primary-hover underline;
+      }
+    }
+  }
+
+  article {
+    @apply py-6;
+
+    .articleTitle {
+      @apply relative h6 mb-4 pl-4;
+
+      &:before {
+        @apply content-[''] absolute top-0 left-0 w-[4px] h-full bg-secondary;
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+@use '_components.scss';
+
+.logoContainer {
+  @apply relative pxContent bg-white;
+
+  .title {
+    @apply text-black fontTitle text-[42px] font-bold leading-[46px] tracking-[-0.42px] capitalize text-center;
+  }
+
+  .logoRow {
+    @apply flex flex-col items-center;
+
+    .category {
+      @apply my-5 py-[15px] px-[36px] w-fit text-black fontTitle text-lg text-center font-bold uppercase border border-[#ccc] rounded-full;
+
+      @screen lg {
+        @apply my-[30px];
+      }
+    }
+
+    .row {
+      @apply w-full flex items-center justify-center gap-10 mb-10;
+
+      .imgWrapper {
+        &.three {
+          @apply w-[100px] h-[52px];
+
+          @screen lg {
+            @apply w-[336px] h-[155px];
+          }
+        }
+
+        &.five {
+          @apply w-[93px] h-[43px];
+
+          @screen lg {
+            @apply w-[219px] h-[107px];
+          }
+        }
+
+        &.six {
+          @apply w-[85px] h-[45px];
+
+          @screen lg {
+            @apply w-[180px] h-[90px];
+          }
+        }
+
+        &.eight {
+          @apply w-[70px] h-[70px];
+
+          @screen lg {
+            @apply w-[90px] h-[90px];
+          }
+        }
+
+        .img {
+          @apply w-full h-full object-cover;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+@use '_components.scss';
+
+.subNavGroup {
+  @apply flex flex-col gap-4 flex-1;
+
+  @screen md {
+    @apply min-w-[calc(33%-13px)] max-w-[calc(33%-13px)];
+  }
+
+  .subNavGroupTitle {
+    @apply inline-block fontTitle text-black text-[18px] font-bold uppercase border-b-[2px] border-solid border-primary w-max;
+
+    @screen md {
+      @apply text-[15px];
+    }
+  }
+
+  .subNavGroupBody {
+    @apply flex flex-col gap-2 h-full;
+
+    .subNavItem {
+      @apply text-black fontBody font-normal w-max;
+
+      span {
+        @apply font-normal fontBody text-[14px] capitalize;
+      }
+    }
+  }
+
+  .subNavCard {
+    @apply relative flex flex-col h-full pb-12;
+
+    .title {
+      @apply h5;
+
+      @screen md {
+        @apply h6;
+      }
+
+      + .description {
+        @apply mt-1;
+      }
+    }
+
+    .description {
+      @apply text-[14px] leading-snug max-w-[90%];
+    }
+
+    .thumb {
+      @apply relative w-full h-[220px] rounded-tl-[10px] rounded-tr-[10px] overflow-hidden mb-4;
+    }
+
+    .actions {
+      @apply absolute bottom-0 flex gap-2;
+    }
+  }
+}

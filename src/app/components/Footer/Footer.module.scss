@@ -1,0 +1,202 @@
+@use '_components.scss';
+
+.footer {
+  @apply relative z-footer max-w-wrapper mx-auto;
+
+  .footerInner {
+    @apply w-full px-[20px] pt-[32px] pb-[50px] overflow-hidden bg-gray-100;
+
+    @screen md {
+      @apply px-[25px];
+    }
+
+    @screen lg {
+      @apply px-[50px] pt-[40px] pb-[60px];
+    }
+  }
+
+  .footerFeature {
+    @apply flex flex-col gap-10;
+
+    @screen lg {
+      @apply flex-row;
+    }
+
+    .featureLeft {
+      @apply flex-1;
+    }
+
+    .featureRight {
+      @apply flex flex-1 flex-col justify-between;
+    }
+  }
+
+  .footerMenuMobile {
+    @screen lg {
+      @apply hidden;
+    }
+
+    .footerMenuGroup {
+      + .footerMenuGroup {
+        @apply mt-6;
+      }
+
+      h2 {
+        button {
+          @apply relative flex w-full outline-none py-0;
+        }
+      }
+
+      .indicator {
+        @apply absolute top-0 right-0 flex items-center justify-center w-6 h-6 duration-300 transition-transform;
+
+        &[data-open='true'] {
+          @apply rotate-180;
+        }
+
+        .indicatorIcon {
+          @apply w-[14px] h-[6px] text-primary;
+        }
+      }
+
+      .groupLabel {
+        @apply w-full fontTitle font-bold text-[15px];
+      }
+
+      .groupItems {
+        @apply flex flex-col mt-4;
+
+        .footerMenuItem {
+          + .footerMenuItem {
+            @apply mt-2;
+          }
+
+          span {
+            @apply block fontBody font-normal bodyText3 capitalize transition-[color] duration-300;
+          }
+
+          &:hover {
+            span {
+              @apply text-primary;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footerMenuDesktop {
+    @apply hidden;
+
+    @screen lg {
+      @apply flex justify-between gap-6 w-full mt-10;
+    }
+
+    .footerMenuGroup {
+      @apply w-[240px] max-w-[25%];
+
+      .groupLabel {
+        @apply text-primary fontTitle font-bold mb-5;
+      }
+      .groupItems {
+        @apply flex flex-col gap-4;
+      }
+
+      .footerMenuItem {
+        span {
+          @apply block fontBody font-normal bodyText2 capitalize transition-[color] duration-300 leading-none;
+        }
+
+        &:hover {
+          span {
+            @apply text-primary;
+          }
+        }
+      }
+    }
+  }
+
+  .footerOtherContent {
+    @apply flex flex-col justify-center items-center gap-5 pt-4 mt-9 border-t-[1px] border-solid border-[#e9e9e9];
+
+    @screen lg {
+      @apply flex-row justify-between items-start gap-[210px];
+    }
+
+    .footerLogo {
+      .logo {
+        @apply block;
+
+        img {
+          @apply block w-full aspect-[200/58] h-[40px] grayscale-[100%] opacity-50;
+        }
+      }
+    }
+
+    .footerQuickMenu {
+      @apply flex flex-col gap-3 items-center;
+
+      @screen lg {
+        @apply items-end;
+      }
+
+      .quickMenuList {
+        ul {
+          @apply flex flex-wrap justify-center gap-y-2;
+
+          @screen lg {
+            @apply justify-end;
+          }
+
+          li {
+            @apply relative pr-[20px];
+
+            @screen lg {
+              @apply pr-8;
+            }
+
+            &:after {
+              @apply absolute top-1/2 right-[10px] -translate-y-1/2 content-[''] w-[1px] h-[8px] bg-primary;
+
+              @screen lg {
+                @apply right-4 mt-[2px];
+              }
+            }
+
+            &:last-child {
+              @apply pr-0;
+
+              &:after {
+                @apply hidden;
+              }
+            }
+          }
+        }
+      }
+
+      .footerQuickMenuItem {
+        span {
+          @apply block fontBody font-normal text-[12px] capitalize transition-[color] duration-300;
+
+          @screen lg {
+            @apply text-[14px];
+          }
+        }
+
+        &:hover {
+          span {
+            @apply text-primary;
+          }
+        }
+      }
+    }
+
+    .copyright {
+      @apply fontBody text-[12px] text-center leading-snug;
+
+      @screen lg {
+        @apply text-right text-[14px];
+      }
+    }
+  }
+}

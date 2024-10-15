@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "title": "DigiStock: DigiDumpling Stock Market, Data Updates, Reports &amp; News",
+    "description": "Get the latest stock market news, stock information &amp; quotes, data analysis reports, as well as a general overview of the market landscape from Nasdaq.",
+    "keywords":"nasdaq services, corporate business solutions, corporate solutions, business solutions company, companies corporate solutions, private companies corporate solutions",
+    "ogImage": "/assets/img/share_1200x630.jpg"
+  },
+  "pageOption": {
+    "isShowProgress": false
+  },
+  "breadcrumb": [
+    {
+      "title": "Home",
+      "url": "/en",
+      "current": false
+    },
+    {
+      "title": "Stocks",
+      "url": "/en",
+      "current": false
+    },
+    {
+      "title": "CLIK",
+      "url": "/en/stocks/clik",
+      "current": true
+    }
+  ],
+  "content": [
+    {
+      "id": "s01",
+      "module": "SectionHeaderBanner",
+      "moduleOption": {
+        "isBannerSize": "small"
+      },
+      "content": {
+        "title": "Stock Info",
+        "description": "Stay ahead in the fast-paced world of stocks<br/> with real-time updates and reliable analysis at your fingertips.",
+        "media": {
+          "type": "image",
+          "src": {
+            "desktop": "/assets/img/content/header_banner.jpg",
+            "mobile": null
+          },
+          "alt": "",
+          "poster": null,
+          "mediaCaption": "Stay ahead in the fast-paced world of stocks with real-time updates and reliable analysis at your fingertips."
+        }
+      }
+    },
+    {
+      "id":"s02",
+      "module": "StockDetail",
+      "moduleOption": null,
+      "content": {
+        "title":"Stock Quote",
+        "description":"The stock quote serves as a crucial indicator in the world of finance, providing up-to-the-minute information on a company's stock price."
+      }
+    }
+  ]
+}

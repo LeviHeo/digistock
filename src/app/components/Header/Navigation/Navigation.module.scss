@@ -1,0 +1,157 @@
+@use '_components.scss';
+
+.nav {
+  @apply hidden relative z-[100] text-base justify-between gap-x-10 w-full;
+
+  @screen lg {
+    @apply flex;
+  }
+
+  .link {
+    @apply hover:text-primary duration-300;
+  }
+}
+
+.btnHome {
+  @apply flex justify-center items-center w-7 h-7;
+
+  .btnHomeIcon {
+    @apply block w-5 h-5;
+  }
+}
+
+.hasSub {
+  a,
+  button {
+    @apply relative flex items-center gap-2 uppercase font-semibold text-[14px] transition-[color] duration-300;
+
+    .icon {
+      @apply w-[10px] h-[6px] text-primary transition-transform duration-300;
+    }
+
+    @screen hd {
+      @apply text-[16px];
+    }
+  }
+
+  &.navActive {
+    a,
+    button {
+      @apply text-primary;
+
+      .icon {
+        @apply rotate-180;
+      }
+    }
+  }
+}
+
+.noSub {
+  span {
+    font-size: 14px !important;
+    font-family: var(--font-open-sans) !important;
+    font-weight: 600 !important;
+
+    @screen hd {
+      font-size: 16px !important;
+    }
+  }
+}
+
+.mainNav {
+  @apply relative z-10 flex items-center justify-between w-full gap-6;
+
+  @screen hd {
+    @apply gap-12;
+  }
+
+  .mainNavInner {
+    @apply relative z-10 flex items-center gap-6;
+
+    @screen hd {
+      @apply gap-10;
+    }
+  }
+}
+
+.hasImportantNotice {
+  .subNav {
+    @apply top-[calc(var(--header-height)+var(--header-quickMenu-height)+var(--header-importantNotice-height)+var(--header-importantNotice-content-height))];
+  }
+}
+
+.hideHeader {
+  .subNav {
+    @apply top-[calc(var(--header-height))];
+  }
+}
+
+.subNav {
+  @apply fixed z-0 top-[calc(var(--header-height)+var(--header-quickMenu-height))] left-0 w-full h-auto opacity-0 bg-gray-200 transition-[opacity,top] duration-300;
+
+  .subNavAniCont {
+    @apply border-t-[1px] border-solid border-transparent;
+  }
+
+  &.subNavActive {
+    @apply opacity-100;
+  }
+
+  .subNavInner {
+    @apply relative flex gap-8 px-main-spacing-x pt-9 pb-14 max-w-wrapper mx-auto;
+
+    @screen hd {
+      @apply px-main-spacing-x-lg;
+    }
+  }
+
+  .subNavClose {
+    @apply absolute top-4 right-[var(--main-spacing-x)] w-[30px] h-[30px] flex justify-center items-center;
+
+    .icon {
+      @apply w-5 h-5 text-black transition-colors duration-300;
+    }
+
+    &:hover {
+      .icon {
+        @apply text-primary;
+      }
+    }
+
+    @screen hd {
+      @apply right-[calc(var(--main-spacing-x)*2)];
+    }
+  }
+
+  .subNavHead {
+    @apply flex flex-col gap-2 w-[400px] max-w-[30%];
+
+    .subNavHeadTitle {
+      @apply h3 text-black;
+    }
+
+    .subNavHeadDescription {
+      @apply text-[14px] leading-6;
+    }
+  }
+
+  .subNavBody {
+    @apply relative flex flex-wrap ml-8 w-full gap-y-12 gap-x-5;
+  }
+}
+
+.highlightAction {
+  @apply flex items-center gap-6;
+
+  .highlightCta {
+    @apply flex gap-[10px];
+
+    a {
+      @screen hd {
+        span {
+          font-size: 18px !important;
+        }
+      }
+    }
+  }
+}

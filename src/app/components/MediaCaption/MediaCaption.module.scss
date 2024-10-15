@@ -1,0 +1,79 @@
+@use '_components.scss';
+
+.informationIcon {
+  @apply relative z-20 flex items-center justify-center w-6 h-6 rounded-full;
+
+  > * {
+    @apply pointer-events-none;
+  }
+
+  &.active {
+    .icon {
+      @apply text-white w-3;
+    }
+
+    &:after {
+      @apply bg-black;
+    }
+  }
+
+  .icon {
+    @apply relative z-10 text-black w-[2px] transition-colors;
+  }
+
+  &:after {
+    @apply content-[''] absolute z-0 w-full h-full bg-white rounded-full opacity-80 transition-all;
+  }
+
+  &:hover {
+    .icon {
+      @apply text-white;
+    }
+
+    &:after {
+      @apply bg-primary opacity-100 w-[120%] h-[120%];
+    }
+  }
+
+  &:focus-visible {
+    .icon {
+      @apply text-white;
+    }
+
+    &:after {
+      @apply bg-primary opacity-100;
+    }
+  }
+}
+
+.caption {
+  @apply absolute z-10 top-0 right-0 w-full h-full flex justify-center items-end;
+
+  .captionInner {
+    @apply relative text-white w-full h-max max-h-full px-main-spacing-x-sm py-6 overflow-auto;
+
+    @screen md {
+      @apply px-main-spacing-x;
+    }
+
+    .captionContent {
+      @apply relative z-10 text-sm;
+
+      > * {
+        @apply text-sm;
+      }
+
+      @screen md {
+        @apply text-base;
+
+        > * {
+          @apply text-base;
+        }
+      }
+    }
+
+    &:after {
+      @apply content-[''] absolute top-0 left-0 w-full h-full opacity-80 bg-black z-0;
+    }
+  }
+}
