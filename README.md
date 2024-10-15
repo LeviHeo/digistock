@@ -1,6 +1,8 @@
-## Digistock
+## DigiStock
 
 This application is a test task for DigiDumpling.
+
+Preview: [Digistock.leviheo.app](https://digistock.leviheo.app/)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
