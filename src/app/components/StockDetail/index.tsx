@@ -263,6 +263,10 @@ const Sandbox = ({ order, data }: { order: number; data: Module<SandboxProps, Mo
           footer: toolFooter,
         },
       },
+      title: {
+        display: true,
+        text: `${stockData.overview.name} (${stockData.overview.ticker}) 5d Price`,
+      },
       legend: {
         display: false,
       },
@@ -299,7 +303,6 @@ const Sandbox = ({ order, data }: { order: number; data: Module<SandboxProps, Mo
 
     if (!stockData.prevClose[0]) return;
 
-    const { v, vw, o, c, h, l, t, n } = stockData.prevClose[0];
     const listLable = [
       'Volume',
       'Volmue weight',
