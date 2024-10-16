@@ -46,7 +46,7 @@ const Sandbox = ({ order, data }: { order: number; data: Module<SandboxProps, Mo
   };
 
   const [lastestMarketDate, setLatestMarketDate] = useState<string>('');
-  const [dateRangeGap, setDateRangeGap] = useState<number>(2);
+  const [dateRangeGap, setDateRangeGap] = useState<number>(5);
   const [dateRange, setDateRange] = useState<any>(['', '']);
   const [chartLabels, setChartLabels] = useState<any>();
   const [chartDatasets, setChartDatasets] = useState<any>();
@@ -115,12 +115,24 @@ const Sandbox = ({ order, data }: { order: number; data: Module<SandboxProps, Mo
       });
     }
 
+    let cnt = 0;
+    let cntWeekend = 0;
     const result = range.map((item, index) => {
-      const chart = chartData[index];
-      return {
-        ...item,
-        chart,
-      };
+      if (item.isWeekend) {
+        cntWeekend++;
+        const chart = chartData[cnt - 1];
+        return {
+          ...item,
+          chart,
+        };
+      } else {
+        cnt++;
+        const chart = chartData[index - cntWeekend];
+        return {
+          ...item,
+          chart,
+        };
+      }
     });
 
     let label: string[] = [];
@@ -360,7 +372,13 @@ const Sandbox = ({ order, data }: { order: number; data: Module<SandboxProps, Mo
                 return (
                   <div key={index} className={`${styles.infoRow}`}>
                     <div className={`${styles.th}`}>{item.label}</div>
-                    <div className={`${styles.td}`}>{item.value}</div>
+                    {item.label === 'Volume' ? (
+                      <div className={`${styles.td}`}>{formatNumber(item.value)}</div>
+                    ) : item.label.includes('Price') ? (
+                      <div className={`${styles.td}`}>${item.value}</div>
+                    ) : (
+                      <div className={`${styles.td}`}>{item.value}</div>
+                    )}
                   </div>
                 );
               })}
